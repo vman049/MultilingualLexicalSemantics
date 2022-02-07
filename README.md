@@ -1,6 +1,6 @@
 # MultilingualLexicalSemantics
 
-Code to train, translate, and evaluate models. To run this code, first download and extract the data from http://opus.nlpl.eu/OpenSubtitles-v2018.php. For example, for EN-BR, use the commands:
+Code to train, translate, and evaluate models. To run this code, first download and extract the data from http://opus.nlpl.eu/OpenSubtitles-v2018.php. For example, for EN-BN, use the commands:
 
 ```
 $ mkdir -p data/en-bn \&\& cd data/en-bn
