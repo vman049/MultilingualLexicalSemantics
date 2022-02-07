@@ -12,6 +12,7 @@ RESULTS_PATH=$3/txformer
 if [ ! -d OpenNMT-py ]; then
 	pip install OpenNMT-py
 	git clone https://github.com/OpenNMT/OpenNMT-py.git
+	git checkout 14f3ac6f6cce7b8d9c77e51ea3b5c3de8f95b0d7
 fi
 
 sl=en
