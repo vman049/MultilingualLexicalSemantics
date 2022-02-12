@@ -33,7 +33,7 @@ rm -f num_lines.txt
 
 ##### HARDCODED FOR DEBUGGING PURPOSES, DELETE BEFORE STARTING FINAL RUN #####
 # num_lines=601164  # minimum number of lines across all five languages
-num_lines=5000   # a small number of lines just for debugging
+# num_lines=5000   # a small number of lines just for debugging
 
 # denote indices for training, validation, and testing data
 idx_train=$(($num_lines/20*14)) # 70% training
