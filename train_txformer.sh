@@ -57,7 +57,7 @@ do
 		-transformer_ff 2048 -heads 8 \
 		-encoder_type transformer -decoder_type transformer \
 		-position_encoding \
-		-train_steps 50000 \
+		-train_steps 100 \
 		-max_generator_batches 2 -dropout 0.1 \
 		-batch_size 4096 -batch_type tokens -normalization tokens -accum_count 2 \
 		-optim adam -adam_beta2 0.998 -decay_method noam \
