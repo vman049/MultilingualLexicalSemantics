@@ -47,17 +47,17 @@ for tl in $LANGUAGES
 do
 	echo "Shuffling $sl-$tl data"
 	
-	for l in $sl $tl
-	do
-		rm -f $DATA_PATH/$sl-$tl/shuffle_input.$l
-		rm -f $DATA_PATH/$sl-$tl/shuffle_output.$l
-		sed -n "1,${idx_test}p;$(($idx_test+1))q" $DATA_PATH/$sl-$tl/OpenSubtitles.$sl-$tl.$l > \
-		$DATA_PATH/$sl-$tl/shuffle_input.$l
-	done
+# 	for l in $sl $tl
+# 	do
+# 		rm -f $DATA_PATH/$sl-$tl/shuffle_input.$l
+# 		rm -f $DATA_PATH/$sl-$tl/shuffle_output.$l
+# 		sed -n "1,${idx_test}p;$(($idx_test+1))q" $DATA_PATH/$sl-$tl/OpenSubtitles.$sl-$tl.$l > \
+# 		$DATA_PATH/$sl-$tl/shuffle_input.$l
+# 	done
 	
-	bash shuffle_parallel_corpora.sh \
-	$DATA_PATH/$sl-$tl/shuffle_input.$sl $DATA_PATH/$sl-$tl/shuffle_input.$tl \
-	$DATA_PATH/$sl-$tl/shuffle_output.$sl $DATA_PATH/$sl-$tl/shuffle_output.$tl 42
+# 	bash shuffle_parallel_corpora.sh \
+# 	$DATA_PATH/$sl-$tl/shuffle_input.$sl $DATA_PATH/$sl-$tl/shuffle_input.$tl \
+# 	$DATA_PATH/$sl-$tl/shuffle_output.$sl $DATA_PATH/$sl-$tl/shuffle_output.$tl 42
 	
 	for l in $sl $tl
 	do
