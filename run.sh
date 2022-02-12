@@ -5,7 +5,7 @@
 
 # E.g.: /work/vas11/NLP/lowrestxformer/data
 DATA_PATH=$1
-rm -r $DATA_PATH
+# rm -r $DATA_PATH
 cp -r ${DATA_PATH}_orig $DATA_PATH
 
 # E.g.: "fr de zh_cn ko si"
