@@ -15,8 +15,6 @@ if [ ! -d OpenNMT-py ]; then
 	cd OpenNMT-py && git config core.filemode false
 	git checkout 14f3ac6f6cce7b8d9c77e51ea3b5c3de8f95b0d7
 	cd ..
-	pip install torch==1.4.0 torchvision==0.5.0
-	pip install torchtext==0.4.0
 fi
 
 sl=en
