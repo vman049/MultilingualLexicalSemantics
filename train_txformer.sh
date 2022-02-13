@@ -13,12 +13,12 @@ if [ ! -d OpenNMT-py ]; then
 	pip install OpenNMT-py
 	git clone https://github.com/OpenNMT/OpenNMT-py.git
 	cd OpenNMT-py && git config core.filemode false
-	git checkout 8b62569b1ac1567669cf3af4d258c7549050d432
+	git checkout d904579734e894ae29d1b69fa403123517a8ddd7
+	pip install -r requirements.txt
 	cd ..
-	pip install torch==0.4.1
 fi
 
-cp /content/drive/MyDrive/NLP/beam_search.py /content/drive/MyDrive/NLP/SIGIR/code/OpenNMT-py/onmt/translate/beam_search.py
+# cp /content/drive/MyDrive/NLP/beam_search.py /content/drive/MyDrive/NLP/SIGIR/code/OpenNMT-py/onmt/translate/beam_search.py
 
 sl=en
 # ablations='base pos_case_sp pos case sp pos_case pos_sp case_sp' # commented out since we're not doing a full ablation study
