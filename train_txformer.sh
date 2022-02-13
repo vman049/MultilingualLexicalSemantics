@@ -20,7 +20,7 @@ fi
 sl=en
 # ablations='base pos_case_sp pos case sp pos_case pos_sp case_sp' # commented out since we're not doing a full ablation study
 ablations='base pos_case_sp'
-checkpoints='5000 10000 15000 20000 25000 30000 35000 40000 45000 50000'
+checkpoints='100 10000 15000 20000 25000 30000 35000 40000 45000 50000'
 
 for ablation in $ablations
 do
@@ -57,7 +57,7 @@ do
 		-transformer_ff 2048 -heads 8 \
 		-encoder_type transformer -decoder_type transformer \
 		-position_encoding \
-		-train_steps 5000 \
+		-train_steps 100 \
 		-max_generator_batches 2 -dropout 0.1 \
 		-batch_size 4096 -batch_type tokens -normalization tokens -accum_count 2 \
 		-optim adam -adam_beta2 0.998 -decay_method noam \
@@ -65,7 +65,7 @@ do
 		-param_init 0 -param_init_glorot \
 		-label_smoothing 0.1 \
 		-feat_merge sum \
-		-valid_steps 2500 -save_checkpoint_steps 5000 \
+		-valid_steps 25 -save_checkpoint_steps 50 \
 		-world_size 1 -gpu_ranks 0 2>&1 | \
 		tee $RESULTS_PATH/$sl-$tl/$ablation/terminal_output_train.txt
 
