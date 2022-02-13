@@ -79,6 +79,8 @@ do
 			-model $RESULTS_PATH/$sl-$tl/$ablation/model_step_$checkpoint.pt \
 			-src $DATA_PATH/$sl-$tl/OpenSubtitles.$sl-$tl.$sl.sptest.${ablation} \
 			-output $RESULTS_PATH/$sl-$tl/$ablation/translation_$checkpoint.txt \
+			--batch_size 8 \
+			--beam_size 3 \
 			-replace_unk \
 			-verbose
 			
