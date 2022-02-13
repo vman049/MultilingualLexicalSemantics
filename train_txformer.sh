@@ -17,6 +17,8 @@ if [ ! -d OpenNMT-py ]; then
 	cd ..
 fi
 
+cp /content/drive/MyDrive/NLP/beam_search.py /content/drive/MyDrive/NLP/SIGIR/code/OpenNMT-py/onmt/translate/beam_search.py
+
 sl=en
 # ablations='base pos_case_sp pos case sp pos_case pos_sp case_sp' # commented out since we're not doing a full ablation study
 ablations='base pos_case_sp'
