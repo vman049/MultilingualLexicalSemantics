@@ -13,7 +13,7 @@ if [ ! -d OpenNMT-py ]; then
 # 	pip install OpenNMT-py
 	git clone https://github.com/OpenNMT/OpenNMT-py.git
 	cd OpenNMT-py && git config core.filemode false
-	git checkout d904579734e894ae29d1b69fa403123517a8ddd7
+	git checkout d3d280ed1fabc13f2f43dd36704f8b6b6ef7b792
 	pip install -r requirements.txt
 	cd ..
 fi
