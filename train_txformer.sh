@@ -13,8 +13,9 @@ if [ ! -d OpenNMT-py ]; then
 	pip install OpenNMT-py
 	git clone https://github.com/OpenNMT/OpenNMT-py.git
 	cd OpenNMT-py && git config core.filemode false
-	git checkout 14f3ac6f6cce7b8d9c77e51ea3b5c3de8f95b0d7
+	git checkout 8b62569b1ac1567669cf3af4d258c7549050d432
 	cd ..
+	pip install torch==0.4.1
 fi
 
 cp /content/drive/MyDrive/NLP/beam_search.py /content/drive/MyDrive/NLP/SIGIR/code/OpenNMT-py/onmt/translate/beam_search.py
