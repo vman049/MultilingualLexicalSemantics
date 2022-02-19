@@ -108,7 +108,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH_TEMP:$LD_LIBRARY_PATH
 
 ## set vocabulary size
 # vocab_size=32000
-vocab_size=5567
+vocab_size=5505
 
 ## train model
 for tl in $LANGUAGES
@@ -133,7 +133,6 @@ do
 	
 	## train the sentencepiece model on only the training examples from both languages
 	$SP_PATH/spm_train --input=$DATA_PATH/$sl-$tl/${sl}-${tl}_train.txt \
-	  --hard_vocab_limit=false \
 	  --model_prefix=$DATA_PATH/$sl-$tl/spm/spm_$sl-$tl \
 	  --vocab_size=$vocab_size --character_coverage=1
 
