@@ -23,4 +23,4 @@ RESULTS_PATH=$5
 # bash create_dataset.sh $DATA_PATH "$LANGUAGES"
 bash preprocess_dataset.sh $DATA_PATH "$LANGUAGES" $SP_PATH $LD_LIBRARY_PATH_TEMP
 bash train_txformer.sh $DATA_PATH "$LANGUAGES" $RESULTS_PATH
-bash train_rnn.sh $DATA_PATH "$LANGUAGES" $RESULTS_PATH
+# bash train_rnn.sh $DATA_PATH "$LANGUAGES" $RESULTS_PATH
