@@ -107,7 +107,7 @@ export PATH=$SP_PATH:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH_TEMP:$LD_LIBRARY_PATH
 
 ## set vocabulary size
-vocab_size=32000
+vocab_size=5567
 
 ## train model
 for tl in $LANGUAGES
